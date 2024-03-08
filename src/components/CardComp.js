@@ -43,7 +43,7 @@ const CardComp = () => {
                 marginTop: spacing.MARGIN_24,
                 position: 'absolute',
                 top: 1,
-                
+
                 borderWidth: 1,
                 borderColor: 'gray',
                 borderRadius: spacing.RADIUS_20,
@@ -53,31 +53,31 @@ const CardComp = () => {
                     <Image source={ImagePath.IMG_LOGO} />
                     <Image source={ImagePath.IMG_BANK_NAME} />
                 </View>
-                <View style={{ flexDirection: "row", marginTop: spacing.MARGIN_50, justifyContent: 'space-around' }}>
+                <View style={{ flexDirection: "row", justifyContent: 'space-around', marginVertical: spacing.MARGIN_22 }}>
                     <View>
-                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(13), marginLeft: spacing.MARGIN_8, marginBottom: -20 }} />
+                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(14), marginLeft: spacing.MARGIN_8, marginBottom: -20 }} />
                         <Image source={ImagePath.IMG_DESIGN_FOR_NUMBER} style={{ tintColor: '#fff', marginBottom: -5 }} />
-                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(13), marginLeft: spacing.MARGIN_8, marginTop: -10, }} />
+                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(14), marginLeft: spacing.MARGIN_8, marginTop: -10, }} />
                         <Image source={ImagePath.IMG_DESIGN_FOR_NUMBER} style={{ marginTop: -18, tintColor: '#fff', marginBottom: -10 }} />
-                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(13), marginLeft: spacing.MARGIN_8, marginTop: -10, }} />
+                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(14), marginLeft: spacing.MARGIN_8, marginTop: -10, }} />
                         <Image source={ImagePath.IMG_DESIGN_FOR_NUMBER} style={{ marginTop: -15, tintColor: '#fff', marginBottom: -5 }} />
-                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(13), marginLeft: spacing.MARGIN_8, marginTop: -10, }} />
+                        <TextComp text={String(faker.number.int()).slice(0, 4)} style={{ fontSize: textScale(14), marginLeft: spacing.MARGIN_8, marginTop: -10, }} />
                     </View>
                     <View style={{}}>
-                        <TextComp text='expiry' style={{ fontSize: textScale(12), fontWeight: 400, opacity: 0.5, color: '#FFFFFF' }} />
+                        <TextComp text='expiry' style={{ fontSize: textScale(14), fontWeight: 400, opacity: 0.5, color: '#FFFFFF' }} />
                         <TextComp
                             text={`${faker.date.recent().getDate()}`}
                             style={{
-                                fontSize: textScale(16),
+                                fontSize: textScale(18),
                                 color: '#fff',
                                 fontWeight: 400,
 
                             }}
                         >
-                            <Text style={{ fontSize: textScale(22) }}>/</Text>
+                            <Text style={{ fontSize: textScale(24) }}>/</Text>
                             {`${faker.date.recent().getMonth()}`}
                         </TextComp>
-                        <TextComp text='cvv' style={{ fontSize: textScale(10), fontWeight: 400, opacity: 0.5, color: '#FFFFFF', marginTop: spacing.MARGIN_10 }} />
+                        <TextComp text='cvv' style={{ fontSize: textScale(16), fontWeight: 400, opacity: 0.5, color: '#FFFFFF', marginTop: spacing.MARGIN_8 }} />
                         <View style={{ flexDirection: "row", marginTop: spacing.MARGIN_2, justifyContent: "space-around", alignItems: "center", width: spacing.WIDTH_70, height: spacing.HEIGHT_30 }}>
                             <View>
                                 <Image source={ImagePath.IMG_SECURE} />
@@ -91,17 +91,18 @@ const CardComp = () => {
 
                     </View>
                 </View>
-                <View style={{ flexDirection: 'row' ,paddingHorizontal:spacing.PADDING_16,marginTop:spacing.MARGIN_4}}>
-                    <Image source={ImagePath.IMG_COPY} />
-                    <TextComp text='copy details' style={{ color: '#A90808', fontSize: textScale(12), fontWeight: 500 ,marginLeft:spacing.MARGIN_4}} />
+                <View style={{ marginTop: -spacing.MARGIN_20 }}>
+                    <View style={{ flexDirection: 'row', marginHorizontal: spacing.MARGIN_16 }}>
+                        <Image source={ImagePath.IMG_COPY} />
+                        <TextComp text='copy details' style={{ color: '#A90808', fontSize: textScale(14), fontWeight: 500, marginLeft: spacing.MARGIN_4 }} />
+                    </View>
+                    <View style={{ marginTop: spacing.MARGIN_20, marginRight: spacing.MARGIN_10 }}>
+                        <Image source={ImagePath.IMG_PAYMET_METHOD} style={{ alignSelf: "flex-end", }} />
+                    </View>
                 </View>
-                <View>
-                    <Image source={ImagePath.IMG_PAYMET_METHOD} style={{alignSelf:"flex-end",marginTop:spacing.MARGIN_20,marginRight:spacing.MARGIN_4}}/>
-                </View>
-
             </Animated.View>
             <Animated.View style={[{
-                  width: spacing.WIDTH_160,
+                width: spacing.WIDTH_160,
                 height: spacing.HEIGHT_275,
                 marginTop: spacing.MARGIN_24,
                 backfaceVisibility: 'hidden',
