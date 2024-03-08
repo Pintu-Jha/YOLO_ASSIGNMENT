@@ -29,7 +29,7 @@ export default BottomComp;
 const styles = StyleSheet.create({
   gradientBorder: {
     width: spacing.WIDTH_105,
-    height: spacing.HEIGHT_44,
+    height: spacing.HEIGHT_48,
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',

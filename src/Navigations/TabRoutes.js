@@ -9,34 +9,10 @@ import navigationStrings from './navigationString';
 import ImagePath from '../Utility/ImagePath';
 import { spacing } from '../styles/spacing';
 import TextComp from '../components/TextComp';
-import { Path, Svg } from 'react-native-svg';
 import colors from '../styles/colors';
 
 const BottomTab = createBottomTabNavigator();
-const { width } = Dimensions.get('window');
 
-const SemiEllipseSVG = () => {
-  const semiEllipseHeight = 10; // Adjust the height of the semi-ellipse as needed
-
-  // Calculate the control point for the semi-ellipse
-  const controlPoint = width / 2;
-
-  // const svgPath = `M0 0 H${width} V${semiEllipseHeight} Q${controlPoint} 0 ${width} ${semiEllipseHeight} V0 H0 Z`;
-  const svgPath = `M -1 10 L 23 10 L 23 8 C 23 8 11 5 -1 8 L -1 10`;
-
-  return (
-    <View>
-      <Svg height={40}
-        width="100%"
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none">
-        <Path d="M0,50 C0,22.3858 22.3858,0 50,0 C77.6142,0 100,22.3858 100,50 L100,100 L0,100 Z"
-
-          fill="#3498db" />
-      </Svg>
-    </View>
-  );
-};
 const TabRoutes = () => {
   return (
 
@@ -72,21 +48,19 @@ const TabRoutes = () => {
                 <View
                   style={{
                     width: focused ? spacing.WIDTH_60 : spacing.WIDTH_40,
-                    height: focused ? spacing.HEIGHT_60 : spacing.HEIGHT_40,
+                    height: focused ? spacing.WIDTH_60 : spacing.WIDTH_40,
                     borderWidth: 1,
                     borderBottomWidth: 0,
                     borderColor: focused ? '#fff' : 'gray',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderRadius: focused
-                      ? spacing.HEIGHT_60 / 2
-                      : spacing.HEIGHT_40 / 2,
+                    borderRadius: spacing.RADIUS_90
                   }}>
                   <Image
                     style={{
                       width: focused ? spacing.WIDTH_28 : spacing.WIDTH_20,
                       height: focused ? spacing.HEIGHT_28 : spacing.HEIGHT_20,
-                      borderRadius: focused ? spacing.RADIUS_4 : null,
+                      // borderRadius: focused ? spacing.RADIUS_4 : null,
                       tintColor:'#757575'
                     }}
                     source={ImagePath.IC_HOME}
@@ -110,21 +84,19 @@ const TabRoutes = () => {
               <>
                 <View
                   style={{
-                    width: focused ? spacing.WIDTH_60 : spacing.WIDTH_40,
-                    height: focused ? spacing.HEIGHT_60 : spacing.HEIGHT_40,
+                    width: focused ? spacing.WIDTH_56 : spacing.WIDTH_36,
+                    height: focused ? spacing.WIDTH_56 : spacing.WIDTH_36,
                     borderWidth: 1,
                     borderColor: focused ? '#fff' : '#565756',
                     borderBottomWidth: 0,
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderRadius: focused
-                      ? spacing.HEIGHT_60 / 2
-                      : spacing.HEIGHT_40 / 2,
+                    borderRadius: spacing.RADIUS_90,
                     marginTop: -spacing.MARGIN_40
                   }}>
                   <Image
                     style={{
-                      width: focused ? spacing.WIDTH_28 : spacing.WIDTH_20,
+                      width: focused ? spacing.WIDTH_26 : spacing.WIDTH_20,
                       height: focused ? spacing.HEIGHT_28 : spacing.HEIGHT_20,
                       borderRadius: focused ? spacing.RADIUS_4 : null,
                     }}
@@ -150,20 +122,18 @@ const TabRoutes = () => {
                 <View
                   style={{
                     width: focused ? spacing.WIDTH_60 : spacing.WIDTH_40,
-                    height: focused ? spacing.HEIGHT_60 : spacing.HEIGHT_40,
+                    height: focused ? spacing.WIDTH_60 : spacing.WIDTH_40,
                     borderWidth: 1,
                     borderBottomWidth: 0,
                     borderColor: focused ? '#fff' : 'gray',
                     alignItems: 'center',
                     justifyContent: 'center',
-                    borderRadius: focused
-                      ? spacing.HEIGHT_60 / 2
-                      : spacing.HEIGHT_40 / 2,
+                    borderRadius: spacing.RADIUS_90
                   }}>
                   <Image
                     style={{
                       width: focused ? spacing.WIDTH_40 : spacing.WIDTH_24,
-                      height: focused ? spacing.HEIGHT_40 : spacing.HEIGHT_24,
+                      height: focused ? spacing.WIDTH_40 : spacing.WIDTH_24,
                     }}
                     source={ImagePath.IC_SETTING}
                   />

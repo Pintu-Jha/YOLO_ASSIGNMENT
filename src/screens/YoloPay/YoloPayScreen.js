@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, ART } from 'react-native';
+import { StyleSheet, View,  } from 'react-native';
 import React from 'react';
 import WapperContainer from '../../components/WrapperContainer';
 import TextComp from '../../components/TextComp';
@@ -11,17 +11,19 @@ import colors from '../../styles/colors';
 
 const SemiEllipse = ({ width, height }) => {
   return (
+
     <Svg
       height="5%"
       width="100%"
       preserveAspectRatio="none"
-      style={{ backgroundColor: colors.transparent }}
+      style={{ backgroundColor: "#0D0D0D" }}
     >
       <Path
         d={`M 0 ${spacing.HEIGHT_16} C 0 ${spacing.HEIGHT_16} ${spacing.FULL_WIDTH / 2} -2 ${spacing.FULL_WIDTH} ${spacing.HEIGHT_16} C ${spacing.FULL_WIDTH / 2} ${spacing.HEIGHT_4} 0 ${spacing.HEIGHT_16} 0 ${spacing.HEIGHT_16}`}
         fill="#fff"
       />
     </Svg>
+
   );
 };
 
@@ -57,11 +59,11 @@ const YoloPayScreen = () => {
             <BottomComp text='card'
               style={{ marginLeft: spacing.MARGIN_12, borderColor: '#A90808', }}
               textStyle={{ color: '#A90808' }}
-              colors={['#000', '#A9080800',]}
+              colors={['#000', '#A9080800']}
             />
           </View>
 
-          <View style={{ marginVertical: spacing.MARGIN_50 }}>
+          <View style={{ marginVertical: spacing.MARGIN_50}}>
             <TextComp text='your digital debit card' style={{ color: '#a9aaab', fontWeight: 400, }} />
             <CardComp />
           </View>
